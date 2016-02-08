@@ -26,6 +26,7 @@ class ShiftsController extends Controller
 
     // get an array of employee options
     $employees = User::oldest('name')->isEmployee()->lists('name', 'id')->toArray();
+    $employees = [0 => 'Open shift'] + $employees;
 
     return view('shifts/create', compact('managers', 'employees'));
   }

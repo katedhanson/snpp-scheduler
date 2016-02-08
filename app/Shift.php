@@ -25,6 +25,13 @@ class Shift extends Model
       'start_time', 'end_time'
     ];
 
+    public function setEmployeeIdAttribute($employee_id)
+    {
+      if ($employee_id == 0) {
+        unset($this->attributes['employee_id']);
+      }
+    }
+
     public function setStartTimeAttribute($date)
     {
       $this->attributes['start_time'] = Carbon::createfromformat('U', strtotime($date));
