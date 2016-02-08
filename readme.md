@@ -2,6 +2,17 @@
 
 This repository represents a code challenge based *extremely* loosely on the [code challenge] (https://github.com/wheniwork/standards/blob/master/project.md) proposed by When I Work; for instance, as of the first commit, it's not even written using an API! It's really just an opportunity for me to mess around while teaching myself Laravel. It is most definitely a work in progress. Consider yourself duly warned.
 
+To do:
+ - form validation
+ - user authentication
+ - link to add shift
+ - tweaks to calendar layout
+ - edit shift
+ - edit user
+ - contact modals
+ - time card
+ - link to add user
+
 ## Laravel PHP Framework
 
 Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
