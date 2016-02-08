@@ -12,21 +12,6 @@ SNPP scheduling system
 <div class='island'>
 <h1>Springfield Nuclear Power Plant</h1>
 <div>scheduling system</div>
-  {!! Form::open() !!}
-  <div class='form-group'>
-    {!! Form::label('username', 'Username:') !!}
-    {!! Form::text('username', '', ['class' => 'form-control']) !!}
-  </div>
-
-  <div class='form-group'>
-    {!! Form::label('password', 'Password:') !!}
-    {!! Form::password('password', ['class' => 'form-control']) !!}
-  </div>
-
-  <div class='form-group'>
-    {!! Form::submit('Log in', ['class' => 'btn btn-default form-control']) !!}
-  </div>
-
-  {!! Form::close() !!}
+  <a class='btn btn-default' href="auth/login">Log in</a>
 </div>
 @stop

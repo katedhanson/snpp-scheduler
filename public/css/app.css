@@ -75,6 +75,10 @@ div {
   text-align: center;
 }
 
+.btn {
+  width: 100%;
+}
+
 h2:first-of-type,
 h4:first-child {
   margin-top: 0;

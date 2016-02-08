@@ -29,12 +29,18 @@ Route::get('contact/{id}', 'UsersController@show');
 Route::get('user/create', 'UsersController@create');
 Route::post('users', 'UsersController@store');
 
+// authentication routes
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
 // send any bad urls to the default error page
 Route::get('/{url}', 'ErrorController@index');
 Route::get('schedule/{url}', 'ErrorController@index');
 Route::get('shift/create/{url}', 'ErrorController@index');
 Route::get('directory/{url}', 'ErrorController@index');
 Route::get('user/create/{url}', 'ErrorController@index');
+
 
 
 /*

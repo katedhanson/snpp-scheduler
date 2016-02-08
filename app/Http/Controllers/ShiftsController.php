@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use \App\User;
 use \App\Shift;
 use Illuminate\Http\Request;
+use Auth;
 use File;
 use Response;
 
