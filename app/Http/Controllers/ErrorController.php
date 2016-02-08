@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 
 class ErrorController extends Controller
 {
-    public function default()
+    public function index()
     {
       return view('errors/error');
     }

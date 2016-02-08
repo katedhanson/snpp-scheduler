@@ -30,11 +30,11 @@ Route::get('user/create', 'UsersController@create');
 Route::post('users', 'UsersController@store');
 
 // send any bad urls to the default error page
-Route::get('/{url}', 'ErrorController@default');
-Route::get('schedule/{url}', 'ErrorController@default');
-Route::get('shift/create/{url}', 'ErrorController@default');
-Route::get('directory/{url}', 'ErrorController@default');
-Route::get('user/create/{url}', 'ErrorController@default');
+Route::get('/{url}', 'ErrorController@index');
+Route::get('schedule/{url}', 'ErrorController@index');
+Route::get('shift/create/{url}', 'ErrorController@index');
+Route::get('directory/{url}', 'ErrorController@index');
+Route::get('user/create/{url}', 'ErrorController@index');
 
 
 /*
