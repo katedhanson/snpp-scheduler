@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Shift extends Model
 {
@@ -23,4 +24,14 @@ class Shift extends Model
     protected $dates = [
       'start_time', 'end_time'
     ];
+
+    public function setStartTimeAttribute($date)
+    {
+      $this->attributes['start_time'] = Carbon::createfromformat('U', strtotime($date));
+    }
+
+    public function setEndTimeAttribute($date)
+    {
+      $this->attributes['end_time'] = Carbon::createfromformat('U', strtotime($date));
+    }
 }
