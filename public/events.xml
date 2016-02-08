@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monthly><event><id>1</id><name>Homer Simpson</name><startdate>2016-02-14</startdate><color>#ffd71a</color><url>/contact/3</url></event><event><id>2</id><name>Open shift</name><startdate>2016-02-14</startdate><color>grey</color><url/></event><event><id>3</id><name>Carlton Carlson</name><startdate>2016-02-14</startdate><color>#b16830</color><url>/contact/5</url></event><event><id>4</id><name>Lenford Leonard</name><startdate>2016-02-14</startdate><color>#4e8d73</color><url>/contact/4</url></event></monthly>

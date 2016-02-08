@@ -1,0 +1,31 @@
+body {
+  background-image: url('/images/exterior.png');
+}
+
+.island {
+  background-color: #fada00;
+  margin: 3em auto;
+  padding: 4em 2em;
+  text-align: center;
+  width: 500px;
+  box-shadow: 2px 2px 15px #000;
+}
+
+.island h1 {
+  font-size: 35pt;
+  margin-bottom: 1.5em;
+}
+.form-group {
+  text-align: left;
+}
+
+.btn-default {
+  font-size: 14pt;
+  margin: 1em 0 0;
+  padding: 0;
+  transform: scale(1, 1.5);
+  -webkit-transform:scale(1,1.5); /* Safari and Chrome */
+  -moz-transform:scale(1,1.5); /* Firefox */
+  -ms-transform:scale(1,1.5); /* IE 9 */
+  -o-transform:scale(1,1.5); /* Opera */
+}
