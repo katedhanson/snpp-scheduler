@@ -14,4 +14,13 @@ class Shift extends Model
    protected $fillable = [
      'manager_id', 'employee_id', 'break', 'start_time', 'end_time'
    ];
+
+   /**
+    * The attributes that are dates
+    *
+    * @var array
+    */
+    protected $dates = [
+      'start_time', 'end_time'
+    ];
 }

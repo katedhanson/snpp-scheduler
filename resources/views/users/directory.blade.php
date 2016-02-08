@@ -17,6 +17,7 @@ Plant Directory
   </div>
 
   <h2>Managers</h2>
+  <div>
   @foreach ($managers as $user)
     <h4>{!! $user->name !!}</h4>
     @if ($user->email)
@@ -30,8 +31,10 @@ Plant Directory
     </div>
     @endif
   @endforeach
+</div>
 
   <h2>Employees</h2>
+  <div>
   @foreach ($employees as $user)
     <h4>{!! $user->name !!}</h4>
     @if ($user->email)
@@ -44,6 +47,10 @@ Plant Directory
       phone: {!! $user->phone !!}
     </div>
     @endif
+    <div class='color-sample' style='background-color: {!! $user->color !!}; border: solid 1px black'>
+      Shift color
+    </div>
   @endforeach
+</div>
 </div>
 @stop

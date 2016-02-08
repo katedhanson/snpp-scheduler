@@ -30,7 +30,7 @@ New user
 
   <div class='form-group'>
     {!! Form::label('email', 'Email:') !!}
-    {!! Form::text('email', '', ['class' => 'form-control']) !!}
+    {!! Form::input('email', 'email', '', ['class' => 'form-control']) !!}
   </div>
 
   <div class='form-group'>
@@ -40,7 +40,7 @@ New user
 
   <div class='form-group'>
     {!! Form::label('color', 'Color:') !!}
-    {!! Form::text('color', '', ['class' => 'form-control']) !!}
+    {!! Form::input('color', 'color', '', ['class' => 'form-control']) !!}
   </div>
 
   <div class='create-new'>

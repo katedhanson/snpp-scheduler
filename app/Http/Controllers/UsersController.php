@@ -12,12 +12,8 @@ class UsersController extends Controller
 {
   // show a directory of users, organized by role type
   public function index() {
-    $managers = User::where('role', 'manager')
-    ->orderBy('name', 'asc')
-    ->get();
-    $employees = User::where('role', 'employee')
-    ->orderBy('name', 'asc')
-    ->get();
+    $managers = User::oldest('name')->isManager()->get();
+    $employees = User::oldest('name)->isEmployee()-get();
 
     return view('users/directory', compact('managers', 'employees'));
   }

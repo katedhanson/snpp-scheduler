@@ -12,7 +12,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'username', 'name', 'email', 'password', 'role', 'phone'
+        'username', 'name', 'email', 'password', 'role', 'phone', 'color'
     ];
 
     /**
@@ -23,4 +23,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function scopeIsManager($query)
+    {
+      $query->where('role', 'manager');
+    }
+
+    public function scopeIsEmployee($query)
+    {
+      $query->where('role', 'employee');
+    }
 }

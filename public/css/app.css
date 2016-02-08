@@ -27,6 +27,10 @@ h1 {
   font-size: 38pt;
 }
 
+h2, h3, h4 {
+  margin-bottom: 0;
+}
+
 div {
   margin-bottom: 0.5em;
 }
@@ -64,8 +68,15 @@ div {
     width: 100%;
 }
 
+.color-sample {
+  border-radius: 7px;
+  padding: 3px;
+  width: 7em;
+  text-align: center;
+}
+
 h2:first-of-type,
-h4:first-of-type {
+h4:first-child {
   margin-top: 0;
 }
 
@@ -1212,11 +1223,6 @@ hr {
   .h3 .small {
     font-size: 65%; }
 
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  margin-top: 10px;
-  margin-bottom: 10px; }
   h4 small,
   h4 .small, .h4 small,
   .h4 .small,

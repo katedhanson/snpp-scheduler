@@ -28,12 +28,12 @@ New shift
 
   <div class='form-group'>
     {!! Form::label('start_time', 'Start date and time:') !!}
-    {!! Form::text('start_time', '', ['class' => 'date-time form-control']) !!}
+    {!! Form::input('datetime-local', 'start_time', date('Y-m-d').'T09:00', ['class' => 'date-time form-control']) !!}
   </div>
 
   <div class='form-group'>
     {!! Form::label('end_time', 'End date and time:') !!}
-    {!! Form::text('end_time', '', ['class' => 'date-time form-control']) !!}
+    {!! Form::input('datetime-local', 'end_time', date('Y-m-d').'T17:00', ['class' => 'date-time form-control']) !!}
   </div>
 
   <div class='form-group'>

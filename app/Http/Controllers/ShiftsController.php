@@ -22,16 +22,10 @@ class ShiftsController extends Controller
 
   public function create() {
     // get an array of manager options
-    $managers = User::where('role', 'manager')
-    ->orderBy('name', 'asc')
-    ->lists('name', 'id')
-    ->toArray();
+    $managers = User::oldest('name')->isManager()->lists('name', 'id')->toArray();
 
     // get an array of employee options
-    $employees = User::where('role', 'employee')
-    ->orderBy('name', 'asc')
-    ->lists('name', 'id')
-    ->toArray();
+    $employees = User::oldest('name')->isEmployee()->lists('name', 'id')->toArray();
 
     return view('shifts/create', compact('managers', 'employees'));
   }
@@ -62,7 +56,10 @@ class ShiftsController extends Controller
       $shiftXml = $scheduleXml->addChild('event');
       $shiftXml->addChild('id', $shift->id);
       $shiftXml->addChild('name', $name);
-      $shiftXml->addChild('startdate', "2016-02-14");
+      $shiftXml->addChild('startdate', $shift->start_time->format("Y-m-d"));
+      $shiftXml->addChild('enddate', $shift->end_time->format("Y-m-d"));
+      $shiftXml->addChild('starttime', $shift->start_time->format("H:i"));
+      $shiftXml->addChild('endtime', $shift->end_time->format("H:i"));
       $shiftXml->addChild('color', $color);
       $shiftXml->addChild('url', $url);
 
