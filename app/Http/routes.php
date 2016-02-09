@@ -47,6 +47,9 @@ Route::group(['middleware' => 'web'], function () {
 Route::group(['middleware' => ['web']], function () {
   Route::get('/', function(){ return view('home'); });
 
+  // for now, no one can register new users
+  Route::get('/register', function(){ return view('home'); });
+
   // send any bad urls to the default error page
   Route::get('/{url}', 'ErrorController@index');
   Route::get('schedule/{url}', 'ErrorController@index');
