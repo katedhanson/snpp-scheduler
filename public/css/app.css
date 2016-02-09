@@ -25,10 +25,12 @@ h1 {
   -o-transform:scale(1,2); /* Opera */
   line-height: 1;
   font-size: 38pt;
+  font-weight: bold;
 }
 
-h2, h3, h4 {
-  margin-bottom: 0;
+h2, h3, h4, .container {
+  margin-bottom: 0.2em;
+  font-weight: bold;
 }
 
 div {
@@ -50,15 +52,20 @@ div {
   top: -3.7em;
 }
 
-.nav-links a {
+.nav-links a,
+.form-group a.form-link {
   color: #000;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-.nav-links a:hover {
+.nav-links a:hover  {
   color: #fada00;
   text-decoration: none;
+}
+
+.form-group a.form-link:hover {
+  color: #000;
 }
 
 .create-new {

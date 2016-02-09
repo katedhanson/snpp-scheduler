@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layouts.app')
 
 @section('title')
 Plant Directory
@@ -11,11 +11,6 @@ Plant Directory
 @section('content')
 <h1>Plant directory</h1>
 <div class='island'>
-
-  <div class="nav-links">
-    <a href="schedule">Monthly schedule</a>
-  </div>
-
   <h2>Managers</h2>
   <div>
   @foreach ($managers as $user)

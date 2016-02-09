@@ -172,7 +172,7 @@
 /* Current day style */
 .monthly-today .monthly-day-number {
 	color: #FFF;
-	background: #804315;
+	background: #724477;
 	border-radius: 20px;
 	top: 1px;
 	left: 1px;
@@ -323,7 +323,7 @@
  }
 
 .monthly-event-list .monthly-today .monthly-event-list-date {
-	color: #804315;
+	color: #724477;
 }
 
 /* Events in Events List */

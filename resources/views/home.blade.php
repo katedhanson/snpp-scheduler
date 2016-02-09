@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layouts.app')
 
 @section('title')
 SNPP scheduling system
@@ -9,9 +9,8 @@ SNPP scheduling system
 @stop
 
 @section('content')
-<div class='island'>
+<div class='island home'>
 <h1>Springfield Nuclear Power Plant</h1>
 <div>scheduling system</div>
-  <a class='btn btn-default' href="auth/login">Log in</a>
 </div>
 @stop

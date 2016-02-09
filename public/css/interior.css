@@ -3,11 +3,55 @@ body {
 }
 
 h1 {
-
+  margin: 1.5em 0 0.7em;
 }
 
 .island {
   background-color: #F3F3F5;
   width: 75%;
   border: 2em solid #af845b;
+}
+
+.navbar-default {
+  background-color: #8e6d7f;
+  border-color: #724477;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #000;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #4f2f54;
+}
+
+.navbar-default .navbar-nav > li > a:active {
+  color: #4f2f54;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  background-color: #9fb1c7;
+  border-color: #724477;
+  color: #000;
+}
+
+.dropdown-menu {
+  width: 100%;
+  background-color: #9fb1c7;
+  border-color: #9fb1c7;
+  color: #000
+}
+
+.dropdown-menu > li > a {
+    color: #000;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    color: #fff;
+    background-color: #3a4a60;
 }

@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layouts.app')
 
 @section('title')
 Schedule
@@ -25,9 +25,6 @@ Schedule
 <h1>Monthly schedule</h1>
 
 <div class="island">
-  <div class="nav-links">
-    <a href="directory">Plant directory</a>
-  </div>
   <div class="monthly" id="mycalendar"></div>
 </div>
 @stop

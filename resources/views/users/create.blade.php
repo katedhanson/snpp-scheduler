@@ -1,7 +1,7 @@
-@extends('app')
+@extends('layouts.app')
 
 @section('title')
-New user
+New employee
 @stop
 
 @section('styles')
@@ -13,7 +13,7 @@ New user
 
 
 @section('content')
-<h1>Create a new user</h1>
+<h1>Create a new employee</h1>
 <div class='island'>
   {!! Form::open(array('action' => 'UsersController@store')) !!}
   <div class='form-group'>
@@ -21,11 +21,18 @@ New user
     {!! Form::text('name', '', ['class' => 'form-control']) !!}
   </div>
 
-  <div class='form-group'>
-    {!! Form::label('role', 'Role:') !!}
-    {!! Form::select('role',
-      array('manager' => "Manager", 'employee' => 'Employee'),
-      ['class' => 'form-control']) !!}
+  <div class="form-group{{ $errors->has('role') ? ' has-error' : '' }}">
+    <label class="control-label">Role</label>
+    <select type="select" class="form-control" name="role" value="{{ old('role') }}">
+      <option value="manager">Manager</option>
+      <option value="employee">Employee</option>
+    </select>
+
+    @if ($errors->has('role'))
+    <span class="help-block">
+      <strong>{{ $errors->first('role') }}</strong>
+    </span>
+    @endif
   </div>
 
   <div class='form-group'>
@@ -61,7 +68,7 @@ New user
   </div>
 
   <div class='form-group'>
-    {!! Form::submit('Create user', ['class' => 'btn btn-default form-control']) !!}
+    {!! Form::submit('Create employee', ['class' => 'btn btn-default form-control']) !!}
   </div>
 
   {!! Form::close() !!}

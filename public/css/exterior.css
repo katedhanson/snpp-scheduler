@@ -5,10 +5,13 @@ body {
 .island {
   background-color: #fada00;
   margin: 3em auto;
-  padding: 4em 2em;
   text-align: center;
   width: 500px;
   box-shadow: 2px 2px 15px #000;
+}
+
+.island.home {
+  padding: 4em 2em;
 }
 
 .island h1 {
@@ -19,6 +22,52 @@ body {
   text-align: left;
 }
 
+.navbar-default {
+  background-color: #4b4740;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-color: #6c675d;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #faea7e;
+}
+
+.navbar-default .navbar-nav > li > a:active {
+  color: #fada00;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  background-color: #faea7e;
+  border-color: #4b4740;
+  color: #000;
+}
+
+.dropdown-menu {
+  width: 100%;
+  background-color: #faea7e;
+  border-color: #4b4740;
+  border-top: none;
+  color: #000
+}
+
+.dropdown-menu > li > a {
+    color: #000;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    color: #fff;
+    background-color: #4b4740;
+}
+
+
 .btn-default {
   font-size: 14pt;
   margin: 1em 0 0;
@@ -28,4 +77,16 @@ body {
   -moz-transform:scale(1,1.5); /* Firefox */
   -ms-transform:scale(1,1.5); /* IE 9 */
   -o-transform:scale(1,1.5); /* Opera */
+}
+
+.form-group a.form-link {
+  color: #4b4740;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 75%;
+}
+
+.form-group a.form-link:hover {
+  color: #000;
+  text-decoration: none;
 }

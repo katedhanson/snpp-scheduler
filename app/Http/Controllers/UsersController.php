@@ -2,14 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use \App\User;
+use \App\Shift;
+use Illuminate\Http\Request;
+use Auth;
+use File;
+use Response;
 
 class UsersController extends Controller
 {
+  public function __construct()
+  {
+    $this->middleware('auth');
+  }
+
   // show a directory of users, organized by role type
   public function index() {
     $managers = User::oldest('name')->isManager()->get();
@@ -30,8 +38,16 @@ class UsersController extends Controller
   }
 
   public function store(Request $request) {
-    $input = $request->all();
-    User::create($input);
+    $data = $request->all();
+    User::create([
+        'name' => $data['name'],
+        'username' => $data['username'],
+        'role' => $data['role'],
+        'email' => $data['email'],
+        'phone' => $data['phone'],
+        'color' => $data['color'],
+        'password' => bcrypt($data['password']),
+    ]);
     return redirect('directory');
   }
 }

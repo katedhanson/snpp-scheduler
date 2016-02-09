@@ -30,14 +30,14 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/schedule';
+    protected $redirectPath = '/schedule';
 
     /**
      * Where to redirect users after failed login
      *
      * @var string
      */
-    protected $loginPath = '/error';
+    //protected $loginPath = '/error';
 
     /**
      * Create a new authentication controller instance.
@@ -59,7 +59,8 @@ class AuthController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
+            'email' => 'email|max:255',
+            'username' => 'required|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
         ]);
     }
@@ -74,7 +75,11 @@ class AuthController extends Controller
     {
         return User::create([
             'name' => $data['name'],
+            'username' => $data['username'],
+            'role' => $data['role'],
             'email' => $data['email'],
+            'phone' => $data['phone'],
+            'color' => $data['color'],
             'password' => bcrypt($data['password']),
         ]);
     }

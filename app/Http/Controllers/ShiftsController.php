@@ -13,6 +13,12 @@ use Response;
 
 class ShiftsController extends Controller
 {
+
+  public function __construct()
+  {
+    $this->middleware('auth');
+  }
+  
   public function index() {
     // every time we load the schedule, we update the events xml
     $shifts = Shift::all();
