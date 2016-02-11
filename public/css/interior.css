@@ -8,8 +8,9 @@ h1 {
 
 .island {
   background-color: #F3F3F5;
-  width: 75%;
+  width: 90%;
   border: 2em solid #af845b;
+  margin-bottom: 3em;
 }
 
 .navbar-default {

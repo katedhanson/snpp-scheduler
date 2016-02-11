@@ -15,7 +15,7 @@ New employee
 @section('content')
 <h1>Create a new employee</h1>
 <div class='island'>
-  {!! Form::open(array('action' => 'UsersController@store')) !!}
+  {!! Form::open(array('action' => 'Users\UsersController@store')) !!}
   <div class='form-group'>
     {!! Form::label('name', 'Name:') !!}
     {!! Form::text('name', '', ['class' => 'form-control']) !!}

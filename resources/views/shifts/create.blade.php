@@ -15,15 +15,15 @@ New shift
 @section('content')
 <h1>Create a new shift</h1>
 <div class='island'>
-  {!! Form::open(array('action' => 'ShiftsController@store')) !!}
+  {!! Form::open(array('action' => 'Shifts\ShiftsController@store')) !!}
   <div class='form-group'>
     {!! Form::label('manager_id', 'Manager:') !!}
-    {!! Form::select('manager_id', $managers, ['class' => 'form-control']) !!}
+    {!! Form::select('manager_id', $managers, '', ['class' => 'form-control']) !!}
   </div>
 
   <div class='form-group'>
     {!! Form::label('employee_id', 'Employee:') !!}
-    {!! Form::select('employee_id', $employees, ['class' => 'form-control']) !!}
+    {!! Form::select('employee_id', $employees, '', ['class' => 'form-control']) !!}
   </div>
 
   <div class='form-group'>

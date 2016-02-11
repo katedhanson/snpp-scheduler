@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Scheduler\Http\Controllers;
 
-use App\Http\Requests;
+use Scheduler\Http\Requests;
 use Illuminate\Http\Request;
 use Auth;
 

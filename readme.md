@@ -3,16 +3,19 @@
 This repository represents a code challenge based *extremely* loosely on the [code challenge] (https://github.com/wheniwork/standards/blob/master/project.md) proposed by When I Work; for instance, as of the first commit, it's not even written using an API! It's really just an opportunity for me to mess around while teaching myself Laravel. It is most definitely a work in progress. Consider yourself duly warned.
 
 To do:
- - user authentication (get it to work!)
- - comments, comments, comments...
+ - ~~user authentication (get it to work!)~~
+ - ~~comments, comments, comments...~~
+ - ~~sound design ;)~~
+ - page permissions
  - form validation
- - link to add shift
+ - fix styles for mobile - better responsive
+ - ~~link to add shift~~
  - tweaks to calendar layout
  - edit shift
  - edit user
  - contact modals
  - time card
- - link to add user
+ - ~~link to add user~~
  - separate backend into a RESTful API
  - unit testing
 

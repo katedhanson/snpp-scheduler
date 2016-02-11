@@ -29,17 +29,17 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/home', 'HomeController@index');
 
     // all the pages pertaining to shifts
-    Route::get('schedule', 'ShiftsController@index');
-    Route::get('shift/create', 'ShiftsController@create');
-    Route::get('shift/edit/{id}', 'ShiftsController@edit');
-    Route::get('timecard', 'ShiftsController@timecard');
-    Route::post('shifts', 'ShiftsController@store');
+    Route::get('schedule', 'Shifts\ShiftsController@index');
+    Route::get('shift/create', 'Shifts\ShiftsController@create');
+    Route::get('shift/edit/{id}', 'Shifts\ShiftsController@edit');
+    Route::get('timecard', 'Shifts\ShiftsController@timecard');
+    Route::post('shifts', 'Shifts\ShiftsController@store');
 
     // all the pages pertaining to users
-    Route::get('directory', 'UsersController@index');
-    Route::get('contact/{id}', 'UsersController@show');
-    Route::get('user/create', 'UsersController@create');
-    Route::post('users', 'UsersController@store');
+    Route::get('directory', 'Users\UsersController@index');
+    Route::get('contact/{id}', 'Users\UsersController@show');
+    Route::get('user/create', 'Users\UsersController@create');
+    Route::post('users', 'Users\UsersController@store');
 
 });
 
@@ -51,9 +51,9 @@ Route::group(['middleware' => ['web']], function () {
   Route::get('/register', function(){ return view('home'); });
 
   // send any bad urls to the default error page
-  Route::get('/{url}', 'ErrorController@index');
-  Route::get('schedule/{url}', 'ErrorController@index');
-  Route::get('shift/create/{url}', 'ErrorController@index');
-  Route::get('directory/{url}', 'ErrorController@index');
-  Route::get('user/create/{url}', 'ErrorController@index');
+  Route::get('/{url}', 'Errors\ErrorController@index');
+  Route::get('schedule/{url}', 'Errors\ErrorController@index');
+  Route::get('shift/create/{url}', 'Errors\ErrorController@index');
+  Route::get('directory/{url}', 'Errors\ErrorController@index');
+  Route::get('user/create/{url}', 'Errors\ErrorController@index');
 });
