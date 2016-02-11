@@ -5,7 +5,7 @@ This repository represents a code challenge based *extremely* loosely on the [co
 To do:
  - ~~user authentication (get it to work!)~~
  - ~~comments, comments, comments...~~
- - ~~sound design ;)~~
+ - sound design ;)
  - page permissions
  - form validation
  - fix styles for mobile - better responsive
