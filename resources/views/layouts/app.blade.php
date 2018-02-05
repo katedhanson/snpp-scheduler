@@ -23,7 +23,7 @@
   </div>
 
   <footer>
-    Copyright &copy; <?= date('Y') ?> Kate Hanson
+    Copyright &copy; <?= date('Y') ?> Kate Hanson - this is a test
   </footer>
 
     <!-- JavaScripts -->
