@@ -5,6 +5,42 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+body {
+  background-color: #eee;
+}
+
+#app-layout {
+  padding: inherit;
+}
+
+@media (min-width: 775px) {
+  #app-layout {
+    padding: 1em 2em;
+  }
+}
+
+@media (max-width: 575px) {
+  .col-xs-6 {
+    width: 100% !important;
+  }
+}
+
+#app-layout a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+#app-layout .reference a {
+  color: #888;
+  font-weight: normal;
+}
+
+#app-layout .reference a:hover {
+  text-decoration: none;
+  color: #1f4e83;
+}
+
 html {
   font-family: Verdana,sans-serif;
   -ms-text-size-adjust: 100%;
@@ -16,16 +52,11 @@ body {
 }
 
 h1 {
+  font-family: Lato,sans-serif;
   text-transform: uppercase;
-  text-align: center;
-  transform:scale(1,2); /* W3C */
-  -webkit-transform:scale(1,2); /* Safari and Chrome */
-  -moz-transform:scale(1,2); /* Firefox */
-  -ms-transform:scale(1,2); /* IE 9 */
-  -o-transform:scale(1,2); /* Opera */
   line-height: 1;
-  font-size: 38pt;
-  font-weight: bold;
+  font-size: 36pt !important;
+  color: #1f4e83;
 }
 
 h2, h3, h4, .container {
@@ -33,8 +64,49 @@ h2, h3, h4, .container {
   font-weight: bold;
 }
 
+h5 {
+  margin: 0;
+  color: #777;
+}
+
 div {
   margin-bottom: 0.5em;
+}
+
+.job-position, .reference {
+  margin: 0.5em 2em 2.5em .5em;
+}
+
+.job-position h4 {
+  font-style: italic;
+  color: #666;
+}
+
+.panel-body h5 {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.job-position .summary {
+  margin: 1em 0em;
+}
+
+.accomplishments ul {
+  padding-left: 2em;
+}
+
+ul.list {
+  list-style: none;
+  padding-left: 1em;
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+  color: #888;
+  font-size: small;
+  padding: 1.2em 0em 2em;
+  border-top: 1px solid #d0d0d0;
 }
 
 .island {
@@ -4704,27 +4776,37 @@ button.list-group-item-danger {
   line-height: 1.3; }
 
 .panel {
-  margin-bottom: 20px;
+  margin: 20px 0;
   background-color: #fff;
   border: 1px solid transparent;
-  border-radius: 4px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); }
+  border-radius: 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
 
 .panel-body {
-  padding: 15px; }
-  .panel-body:before, .panel-body:after {
-    content: " ";
-    display: table; }
-  .panel-body:after {
-    clear: both; }
+  padding: 0px 20px 25px;
+  font-weight: normal;
+  color: #888888;
+  font-size: 11pt;
+  font-family: Lato, sanserif;
+}
 
-.panel-heading {
-  padding: 10px 15px;
-  border-bottom: 1px solid transparent;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px; }
-  .panel-heading > .dropdown .dropdown-toggle {
-    color: inherit; }
+.panel-heading, .panel-default > .panel-heading {
+  padding: 10px 15px 5px;
+  margin: 0px;
+  border-top: 5px solid #1f4e83 !important;
+  background-color: white !important;
+  border-radius: 0;
+  font-size: 22px;
+  font-family: Lato, sanserif;
+  text-transform: uppercase;
+  border-bottom: none;
+  color: #1f4e83 !important;
+}
+
+.panel-heading > .dropdown .dropdown-toggle {
+    color: inherit;
+}
 
 .panel-title {
   margin-top: 0;

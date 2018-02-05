@@ -45,10 +45,15 @@ Route::group(['middleware' => 'web'], function () {
 
 // non-authenicated routes
 Route::group(['middleware' => ['web']], function () {
-  Route::get('/', function(){ return view('home'); });
+  Route::get('/', function(){ return view('welcome'); });
+});
+
+// Springfield Powerplant scheduler
+Route::group(['prefix' => 'snpp', 'middleware' => ['web']], function () {
+  Route::get('/', function(){ return view('snpp'); });
 
   // for now, no one can register new users
-  Route::get('/register', function(){ return view('home'); });
+  Route::get('/register', function(){ return view('snpp'); });
 
   // send any bad urls to the default error page
   Route::get('/{url}', 'Errors\ErrorController@index');
